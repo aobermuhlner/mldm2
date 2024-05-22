@@ -6,11 +6,11 @@ import torch.optim as optim
 from torch.utils.data import DataLoader, TensorDataset
 
 # Load image features
-image_features = np.load('image_features.npy')
+image_features = np.load('../../data/features_images/image_features.npy')
 
 # Load tokenized questions and answers
-tokenized_questions = torch.load('tokenized_questions.pt')
-tokenized_answers = torch.load('tokenized_answers.pt')
+tokenized_questions = torch.load('../../data/text/tokenized_questions.pt')
+tokenized_answers = torch.load('../../data/text/tokenized_answers.pt')
 
 # Convert image features to torch tensor
 image_features = torch.tensor(image_features, dtype=torch.float32)
